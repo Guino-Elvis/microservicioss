@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Guino-Elvis/microservicio.git
+          uri: https://github.com/Guino-Elvis/microservicioss.git
           search-paths: config-data
           #username: Guino-Elvis
           #password: gino123456123
