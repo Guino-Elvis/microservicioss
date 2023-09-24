@@ -1,0 +1,22 @@
+server:
+  port: 9090
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: workers-service
+          uri: lb://workers-service
+          predicates:
+            - Path=/workers/**
+        - id: curso-service
+          uri: lb://curso-service
+          predicates:
+            - Path=/curso/**  
+
